@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Sửa Chữa Điện Công Nghiệp Hải Phòng | Bùi Hữu Đại</title>
+
+<style>
+:root{
+--primary:#0a3d62;
+--secondary:#e58e26;
+--green:#28a745;
+--zalo:#0084ff;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7f9;
+line-height:1.6;
+padding-bottom:75px;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#0a3d62,#154d7a);
+color:white;
+text-align:center;
+padding:34px 18px;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+}
+
+header p{
+margin:8px 0;
+}
+
+.container{
+max-width:650px;
+margin:auto;
+padding:15px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:18px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+h2{
+margin-top:0;
+color:#0a3d62;
+border-left:5px solid #e58e26;
+padding-left:10px;
+}
+
+.service{
+background:#eef5fb;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+input{
+width:100%;
+padding:14px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+margin:12px 0;
+}
+
+button{
+width:100%;
+background:#e58e26;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+font-weight:bold;
+border-radius:8px;
+}
+
+#result{
+display:none;
+background:#eaf8ef;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+}
+
+.btn{
+display:block;
+text-decoration:none;
+text-align:center;
+padding:16px;
+border-radius:10px;
+font-weight:bold;
+margin-top:12px;
+color:white;
+}
+
+.call{background:#28a745}
+.zalo{background:#0084ff}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:13px;
+color:#666;
+}
+
+.footer-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+display:flex;
+height:60px;
+}
+
+.footer-nav a{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-weight:bold;
+color:white;
+}
+
+.hotline{
+background:#fff3cd;
+border-left:5px solid #e58e26;
+padding:12px;
+font-weight:bold;
+border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>BÙI HỮU ĐẠI</h1>
+
+<p>
+30 Năm Kinh Nghiệm Thi Công - Sửa Chữa Điện Công Nghiệp
+</p>
+
+<p>
+Xử lý sự cố 24/7 • Dây chuyền sản xuất • Điện mặt trời Hybrid
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="box">
+<div class="hotline">
+☎ Hotline xử lý sự cố: 0838.933.628
+</div>
+</div>
+
+
+
+<div class="box">
+<h2>Thế mạnh dịch vụ</h2>
+
+<div class="service">
+✔ Thi công trạm điện, tủ điện, hệ thống điện công nghiệp
+</div>
+
+<div class="service">
+✔ Sửa chữa bảo trì dây chuyền sản xuất, xử lý sự cố điện khó
+</div>
+
+<div class="service">
+✔ Dịch vụ sự cố điện nhà xưởng 24/7  
+Mất pha • Nhảy CB • Cháy contactor • Lỗi điều khiển
+</div>
+
+<div class="service">
+✔ Tư vấn điện mặt trời Hybrid có lưu trữ
+</div>
+
+</div>
+
+
+
+<div class="box">
+<h2>Vì sao khách chọn tôi?</h2>
+
+<div class="service">
+✔ 30 năm kinh nghiệm thực chiến
+</div>
+
+<div class="service">
+✔ Trực tiếp khảo sát, không qua trung gian
+</div>
+
+<div class="service">
+✔ Giải pháp an toàn và tối ưu chi phí
+</div>
+
+</div>
+
+
+
+<div class="box">
+<h2>Nhập tiền điện nhận cấu hình đề xuất</h2>
+
+<input
+type="number"
+id="money"
+placeholder="Ví dụ 3000000">
+
+<button onclick="calc()">
+TÍNH NGAY
+</button>
+
+<div id="result"></div>
+
+</div>
+
+
+
+<div class="box gallery">
+<h2>Công trình thực tế</h2>
+
+<img src="https://i.postimg.cc/rDw94QGK/1.jpg">
+
+<img src="https://i.postimg.cc/HrktMB08/2.jpg">
+
+<img src="https://i.postimg.cc/K185TJ7g/3.jpg">
+
+<p style="font-weight:bold;color:#0a3d62;">
+Công trình thực tế trực tiếp thi công và xử lý kỹ thuật.
+</p>
+
+</div>
+
+
+
+<div class="box">
+<h2>Hỗ trợ sự cố khẩn cấp</h2>
+
+<p>
+Có thể liên hệ trực tiếp khi hệ thống điện sản xuất gặp sự cố dừng máy.
+</p>
+
+<a href="tel:0838933628" class="btn call">
+📞 Gọi xử lý sự cố hoặc tư vấn miễn phí
+</a>
+
+<a href="https://zalo.me/0838933628"
+class="btn zalo">
+💬 Chat Zalo nhận báo giá
+</a>
+
+</div>
+
+
+</div>
+
+<footer>
+© BuiDai Electrical & Solar | Hải Phòng
+</footer>
+
+
+<div class="footer-nav">
+
+<a href="tel:0838933628"
+style="background:#28a745">
+GỌI
+</a>
+
+<a href="https://zalo.me/0838933628"
+style="background:#0084ff">
+ZALO
+</a>
+
+</div>
+
+
+
+<script>
+function calc(){
+
+let m=document.getElementById("money").value;
+
+if(m<=0 || m==""){
+alert("Vui lòng nhập tiền điện");
+return;
+}
+
+let kw=(m/300000).toFixed(1);
+
+let total=kw*10000000;
+
+let payback=(total/m/12).toFixed(1);
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML=
+
+"<b>Quy mô đề xuất:</b> "
++kw+
+" kWp<br><br>"+
+
+"<b>Dự toán đầu tư:</b> "
++total.toLocaleString()+
+" VNĐ<br><br>"+
+
+"<b>Hoàn vốn dự kiến:</b> "
++payback+
+" năm";
+
+}
+</script>
+
+</body>
+</html>
