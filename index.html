@@ -1,126 +1,205 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Sửa Chữa Điện Công Nghiệp Hải Phòng | Bùi Hữu Đại</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO GOOGLE -->
+<title>Sửa Chữa Điện Công Nghiệp Hải Phòng | Điện Mặt Trời Hybrid | Bùi Hữu Đại</title>
+
+<meta name="description" content="Bùi Hữu Đại - 30 năm kinh nghiệm điện công nghiệp, sửa chữa điện nhà xưởng, điện mặt trời Hybrid tại Hải Phòng - Quảng Ninh. Hotline/Zalo: 0838.933.628">
+
+<meta name="keywords" content="
+điện công nghiệp hải phòng,
+sửa chữa điện công nghiệp hải phòng,
+điện mặt trời hải phòng,
+solar hybrid hải phòng,
+lắp điện mặt trời quảng ninh,
+sửa chữa tủ điện,
+sửa chữa plc biến tần,
+bùi hữu đại điện công nghiệp">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="Bùi Hữu Đại">
+
+<!-- FACEBOOK SEO -->
+<meta property="og:title" content="Bùi Hữu Đại | Điện Công Nghiệp & Điện Mặt Trời Hải Phòng">
+<meta property="og:description" content="30 năm kinh nghiệm thực chiến điện công nghiệp - điện mặt trời Hybrid">
+<meta property="og:image" content="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg">
+<meta property="og:url" content="https://buidaitech-me.github.io/b-n-s-a-2/">
+<meta property="og:type" content="website">
+
+<!-- GOOGLE -->
+<link rel="canonical" href="https://buidaitech-me.github.io/b-n-s-a-2/">
+
+<!-- ICON -->
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3105/3105807.png">
 
 <style>
+
 :root{
 --primary:#0a3d62;
---secondary:#e58e26;
+--secondary:#ff7a00;
 --green:#28a745;
 --zalo:#0084ff;
+--light:#f4f7f9;
 }
 
-*{box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-margin:0;
 font-family:Arial,sans-serif;
-background:#f4f7f9;
-line-height:1.6;
-padding-bottom:75px;
+background:var(--light);
 color:#333;
+line-height:1.6;
+padding-bottom:90px;
 }
 
 header{
-background:linear-gradient(135deg,#0a3d62,#154d7a);
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg');
+
+background-size:cover;
+background-position:center;
+
 color:white;
+padding:50px 20px;
 text-align:center;
-padding:34px 18px;
+}
+
+.avatar{
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid white;
+object-fit:cover;
+margin-bottom:15px;
 }
 
 header h1{
-margin:0;
-font-size:30px;
+font-size:34px;
+margin-bottom:10px;
 }
 
 header p{
-margin:8px 0;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.hotline{
+display:inline-block;
+background:var(--secondary);
+padding:12px 22px;
+border-radius:40px;
+font-weight:bold;
+margin-top:10px;
+font-size:20px;
 }
 
 .container{
-max-width:650px;
+max-width:750px;
 margin:auto;
 padding:15px;
 }
 
 .box{
 background:white;
-padding:20px;
-border-radius:14px;
+padding:22px;
+border-radius:15px;
 margin-bottom:18px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
 h2{
-margin-top:0;
-color:#0a3d62;
-border-left:5px solid #e58e26;
+color:var(--primary);
+margin-bottom:15px;
+border-left:6px solid var(--secondary);
 padding-left:10px;
+font-size:24px;
 }
 
 .service{
 background:#eef5fb;
-padding:12px;
-margin:10px 0;
+padding:14px;
+margin-bottom:12px;
 border-radius:10px;
+font-size:17px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 margin-bottom:12px;
 }
 
 input{
 width:100%;
-padding:14px;
-font-size:16px;
+padding:16px;
+font-size:18px;
 border:1px solid #ccc;
-border-radius:8px;
-margin:12px 0;
+border-radius:10px;
+margin-top:12px;
 }
 
 button{
 width:100%;
-background:#e58e26;
+padding:16px;
+background:var(--secondary);
 color:white;
 border:none;
-padding:15px;
-font-size:16px;
+border-radius:10px;
+font-size:18px;
 font-weight:bold;
-border-radius:8px;
+margin-top:15px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
 }
 
 #result{
 display:none;
-background:#eaf8ef;
-padding:15px;
+background:#e9fff1;
+padding:18px;
 margin-top:15px;
-border-radius:10px;
+border-radius:12px;
+font-size:18px;
+line-height:1.9;
 }
 
 .btn{
 display:block;
 text-decoration:none;
 text-align:center;
-padding:16px;
-border-radius:10px;
-font-weight:bold;
+padding:18px;
 margin-top:12px;
+border-radius:12px;
+font-weight:bold;
 color:white;
+font-size:18px;
 }
 
-.call{background:#28a745}
-.zalo{background:#0084ff}
+.call{
+background:var(--green);
+}
+
+.zalo{
+background:var(--zalo);
+}
 
 footer{
 text-align:center;
-padding:20px;
-font-size:13px;
+padding:30px;
+font-size:14px;
 color:#666;
 }
 
@@ -130,7 +209,8 @@ bottom:0;
 left:0;
 width:100%;
 display:flex;
-height:60px;
+height:70px;
+z-index:999;
 }
 
 .footer-nav a{
@@ -139,174 +219,239 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-decoration:none;
+font-size:20px;
 font-weight:bold;
 color:white;
 }
 
-.hotline{
-background:#fff3cd;
-border-left:5px solid #e58e26;
-padding:12px;
-font-weight:bold;
-border-radius:8px;
+.seo-text{
+font-size:16px;
+line-height:1.8;
 }
+
+.qr{
+text-align:center;
+margin-top:15px;
+}
+
+.qr img{
+width:180px;
+border-radius:10px;
+}
+
+.lang{
+position:fixed;
+top:10px;
+right:10px;
+z-index:999;
+}
+
+.lang button{
+width:auto;
+padding:8px 14px;
+margin:2px;
+font-size:14px;
+}
+
 </style>
+
 </head>
 
 <body>
 
+<!-- NGÔN NGỮ -->
+<div class="lang">
+<button onclick="setLang('vi')">VI</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('cn')">中文</button>
+</div>
+
 <header>
 
-<h1>BÙI HỮU ĐẠI</h1>
+<img
+src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049181.jpg"
+class="avatar">
 
-<p>
-30 Năm Kinh Nghiệm Thi Công - Sửa Chữa Điện Công Nghiệp
+<h1 id="titleName">
+BÙI HỮU ĐẠI
+</h1>
+
+<p id="titleJob">
+Kỹ sư Điện Công Nghiệp & Điện Mặt Trời
 </p>
 
-<p>
-Xử lý sự cố 24/7 • Dây chuyền sản xuất • Điện mặt trời Hybrid
-</p>
+<div class="hotline">
+☎ 0838.933.628
+</div>
 
 </header>
 
-
 <div class="container">
 
+<div class="box">
+
+<h2 id="serviceTitle">
+Dịch vụ chuyên môn
+</h2>
+
+<div class="service">
+✔ Thi công hệ thống điện công nghiệp
+</div>
+
+<div class="service">
+✔ Sửa chữa PLC - Biến tần - Tủ điện
+</div>
+
+<div class="service">
+✔ Xử lý sự cố điện nhà xưởng 24/7
+</div>
+
+<div class="service">
+✔ Điện mặt trời Hybrid có lưu trữ
+</div>
+
+</div>
 
 <div class="box">
-<div class="hotline">
-☎ Hotline xử lý sự cố: 0838.933.628
-</div>
-</div>
 
-
-
-<div class="box">
-<h2>Thế mạnh dịch vụ</h2>
-
-<div class="service">
-✔ Thi công trạm điện, tủ điện, hệ thống điện công nghiệp
-</div>
-
-<div class="service">
-✔ Sửa chữa bảo trì dây chuyền sản xuất, xử lý sự cố điện khó
-</div>
-
-<div class="service">
-✔ Dịch vụ sự cố điện nhà xưởng 24/7  
-Mất pha • Nhảy CB • Cháy contactor • Lỗi điều khiển
-</div>
-
-<div class="service">
-✔ Tư vấn điện mặt trời Hybrid có lưu trữ
-</div>
-
-</div>
-
-
-
-<div class="box">
-<h2>Vì sao khách chọn tôi?</h2>
-
-<div class="service">
-✔ 30 năm kinh nghiệm thực chiến
-</div>
-
-<div class="service">
-✔ Trực tiếp khảo sát, không qua trung gian
-</div>
-
-<div class="service">
-✔ Giải pháp an toàn và tối ưu chi phí
-</div>
-
-</div>
-
-
-
-<div class="box">
-<h2>Nhập tiền điện nhận cấu hình đề xuất</h2>
+<h2>
+Tính nhanh điện mặt trời Hybrid
+</h2>
 
 <input
 type="number"
 id="money"
-placeholder="Ví dụ 3000000">
+placeholder="Nhập tiền điện hàng tháng">
 
 <button onclick="calc()">
-TÍNH NGAY
+TÍNH HỆ THỐNG
 </button>
 
 <div id="result"></div>
 
 </div>
 
-
-
 <div class="box gallery">
-<h2>Công trình thực tế</h2>
 
-<img src="https://i.postimg.cc/rDw94QGK/1.jpg">
+<h2>
+Hình ảnh công trình thực tế
+</h2>
 
-<img src="https://i.postimg.cc/HrktMB08/2.jpg">
+<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg">
 
-<img src="https://i.postimg.cc/K185TJ7g/3.jpg">
+<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049179.jpg">
 
-<p style="font-weight:bold;color:#0a3d62;">
-Công trình thực tế trực tiếp thi công và xử lý kỹ thuật.
-</p>
+<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049175.jpg">
 
 </div>
 
+<div class="box seo-text">
 
-
-<div class="box">
-<h2>Hỗ trợ sự cố khẩn cấp</h2>
+<h2>
+Điện công nghiệp Hải Phòng
+</h2>
 
 <p>
-Có thể liên hệ trực tiếp khi hệ thống điện sản xuất gặp sự cố dừng máy.
+
+Chuyên sửa chữa điện công nghiệp Hải Phòng,
+điện mặt trời Hybrid,
+tủ điện,
+PLC,
+biến tần,
+ATS,
+MCC,
+hệ thống điện nhà xưởng,
+trạm điện,
+máy phát điện,
+xử lý sự cố điện sản xuất 24/7.
+
 </p>
 
-<a href="tel:0838933628" class="btn call">
-📞 Gọi xử lý sự cố hoặc tư vấn miễn phí
-</a>
+<p>
 
-<a href="https://zalo.me/0838933628"
-class="btn zalo">
-💬 Chat Zalo nhận báo giá
-</a>
+Khu vực hỗ trợ:
+Hải Phòng,
+Thủy Nguyên,
+Quảng Ninh,
+Hải Dương,
+Bắc Ninh.
+
+</p>
 
 </div>
 
+<div class="box">
+
+<h2>
+Quét QR Website
+</h2>
+
+<div class="qr">
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://buidaitech-me.github.io/b-n-s-a-2/">
+
+<p style="margin-top:10px;font-weight:bold">
+https://buidaitech-me.github.io/b-n-s-a-2/
+</p>
+
+</div>
+
+</div>
+
+<a
+href="tel:+84838933628"
+class="btn call">
+
+📞 GỌI NGAY
+
+</a>
+
+<a
+href="https://zalo.me/84838933628"
+target="_blank"
+class="btn zalo">
+
+💬 CHAT ZALO
+
+</a>
 
 </div>
 
 <footer>
-© BuiDai Electrical & Solar | Hải Phòng
-</footer>
 
+© Bui Dai Electrical & Solar | Hải Phòng
+
+</footer>
 
 <div class="footer-nav">
 
-<a href="tel:0838933628"
+<a
+href="tel:+84838933628"
 style="background:#28a745">
-GỌI
+
+📞 GỌI
+
 </a>
 
-<a href="https://zalo.me/0838933628"
+<a
+href="https://zalo.me/84838933628"
+target="_blank"
 style="background:#0084ff">
-ZALO
+
+💬 ZALO
+
 </a>
 
 </div>
 
-
-
 <script>
+
 function calc(){
 
 let m=document.getElementById("money").value;
 
-if(m<=0 || m==""){
+if(m=="" || m<=0){
 alert("Vui lòng nhập tiền điện");
 return;
 }
@@ -315,26 +460,62 @@ let kw=(m/300000).toFixed(1);
 
 let total=kw*10000000;
 
-let payback=(total/m/12).toFixed(1);
+let pay=(total/m/12).toFixed(1);
 
 document.getElementById("result").style.display="block";
 
 document.getElementById("result").innerHTML=
 
-"<b>Quy mô đề xuất:</b> "
-+kw+
-" kWp<br><br>"+
+"⚡ Công suất đề xuất: <b>"+kw+" kWp</b><br><br>"+
 
-"<b>Dự toán đầu tư:</b> "
-+total.toLocaleString()+
-" VNĐ<br><br>"+
+"💰 Dự toán đầu tư: <b>"+Number(total).toLocaleString('vi-VN')+" VNĐ</b><br><br>"+
 
-"<b>Hoàn vốn dự kiến:</b> "
-+payback+
-" năm";
+"⏳ Hoàn vốn dự kiến: <b>"+pay+" năm</b><br><br>"+
+
+"📲 Liên hệ Zalo 0838.933.628 để nhận báo giá chi tiết.";
 
 }
+
+
+// ĐỔI NGÔN NGỮ
+
+function setLang(lang){
+
+if(lang=="en"){
+
+document.getElementById("titleJob").innerHTML=
+"Industrial Electrical & Solar Engineer";
+
+document.getElementById("serviceTitle").innerHTML=
+"Professional Services";
+
+}
+
+if(lang=="cn"){
+
+document.getElementById("titleJob").innerHTML=
+"工业电气与太阳能工程师";
+
+document.getElementById("serviceTitle").innerHTML=
+"专业服务";
+
+}
+
+if(lang=="vi"){
+
+document.getElementById("titleJob").innerHTML=
+"Kỹ sư Điện Công Nghiệp & Điện Mặt Trời";
+
+document.getElementById("serviceTitle").innerHTML=
+"Dịch vụ chuyên môn";
+
+}
+
+}
+
 </script>
 
 </body>
 </html>
+```
+
