@@ -1,521 +1,642 @@
-```html
+
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Chữa Điện Công Nghiệp Hải Phòng | PLC - Biến Tần - Solar</title>
 
-<!-- SEO GOOGLE -->
-<title>Sửa Chữa Điện Công Nghiệp Hải Phòng | Điện Mặt Trời Hybrid | Bùi Hữu Đại</title>
+    <meta name="description" content="Chuyên sửa chữa điện công nghiệp Hải Phòng, PLC, biến tần, tủ điện, điện mặt trời Hybrid. Hỗ trợ kỹ thuật nhanh 24/7 với hơn 30 năm kinh nghiệm."/>
 
-<meta name="description" content="Bùi Hữu Đại - 30 năm kinh nghiệm điện công nghiệp, sửa chữa điện nhà xưởng, điện mặt trời Hybrid tại Hải Phòng - Quảng Ninh. Hotline/Zalo: 0838.933.628">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<meta name="keywords" content="
-điện công nghiệp hải phòng,
-sửa chữa điện công nghiệp hải phòng,
-điện mặt trời hải phòng,
-solar hybrid hải phòng,
-lắp điện mặt trời quảng ninh,
-sửa chữa tủ điện,
-sửa chữa plc biến tần,
-bùi hữu đại điện công nghiệp">
+    <style>
+        :root {
+            --primary: #0D1B2A;
+            --accent: #00B894;
+            --accent-hover: #00A383;
+            --zalo-color: #0984E3;
+            --bg-light: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --shadow-sm: 0 2px 8px rgba(13, 27, 42, 0.04);
+            --shadow-md: 0 10px 30px rgba(13, 27, 42, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<meta name="robots" content="index, follow">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<meta name="author" content="Bùi Hữu Đại">
+        body {
+            background: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-<!-- FACEBOOK SEO -->
-<meta property="og:title" content="Bùi Hữu Đại | Điện Công Nghiệp & Điện Mặt Trời Hải Phòng">
-<meta property="og:description" content="30 năm kinh nghiệm thực chiến điện công nghiệp - điện mặt trời Hybrid">
-<meta property="og:image" content="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg">
-<meta property="og:url" content="https://buidaitech-me.github.io/b-n-s-a-2/">
-<meta property="og:type" content="website">
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-<!-- GOOGLE -->
-<link rel="canonical" href="https://buidaitech-me.github.io/b-n-s-a-2/">
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
 
-<!-- ICON -->
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3105/3105807.png">
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-<style>
+        .logo {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
 
-:root{
---primary:#0a3d62;
---secondary:#ff7a00;
---green:#28a745;
---zalo:#0084ff;
---light:#f4f7f9;
-}
+        .menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+        .menu a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
 
-body{
-font-family:Arial,sans-serif;
-background:var(--light);
-color:#333;
-line-height:1.6;
-padding-bottom:90px;
-}
+        .menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
 
-header{
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg');
+        .menu a:hover {
+            color: #fff;
+        }
 
-background-size:cover;
-background-position:center;
+        .menu a:hover::after {
+            width: 100%;
+        }
 
-color:white;
-padding:50px 20px;
-text-align:center;
-}
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)),
+                        url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 140px 0;
+            color: #fff;
+        }
 
-.avatar{
-width:130px;
-height:130px;
-border-radius:50%;
-border:4px solid white;
-object-fit:cover;
-margin-bottom:15px;
-}
+        .hero-content {
+            max-width: 750px;
+        }
 
-header h1{
-font-size:34px;
-margin-bottom:10px;
-}
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
 
-header p{
-font-size:18px;
-margin-bottom:10px;
-}
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
 
-.hotline{
-display:inline-block;
-background:var(--secondary);
-padding:12px 22px;
-border-radius:40px;
-font-weight:bold;
-margin-top:10px;
-font-size:20px;
-}
+        .hero ul {
+            margin-bottom: 40px;
+            list-style: none;
+        }
 
-.container{
-max-width:750px;
-margin:auto;
-padding:15px;
-}
+        .hero li {
+            margin-bottom: 12px;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.85);
+        }
 
-.box{
-background:white;
-padding:22px;
-border-radius:15px;
-margin-bottom:18px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
+        .hero li span {
+            color: var(--accent);
+            font-weight: bold;
+        }
 
-h2{
-color:var(--primary);
-margin-bottom:15px;
-border-left:6px solid var(--secondary);
-padding-left:10px;
-font-size:24px;
-}
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-.service{
-background:#eef5fb;
-padding:14px;
-margin-bottom:12px;
-border-radius:10px;
-font-size:17px;
-}
+        .btn {
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
 
-.gallery img{
-width:100%;
-border-radius:12px;
-margin-bottom:12px;
-}
+        .btn-call {
+            background: var(--accent);
+            color: #fff;
+        }
 
-input{
-width:100%;
-padding:16px;
-font-size:18px;
-border:1px solid #ccc;
-border-radius:10px;
-margin-top:12px;
-}
+        .btn-call:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.3);
+        }
 
-button{
-width:100%;
-padding:16px;
-background:var(--secondary);
-color:white;
-border:none;
-border-radius:10px;
-font-size:18px;
-font-weight:bold;
-margin-top:15px;
-cursor:pointer;
-}
+        .btn-zalo {
+            background: var(--zalo-color);
+            color: #fff;
+        }
 
-button:hover{
-opacity:.9;
-}
+        .btn-zalo:hover {
+            background: #0875c9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.3);
+        }
 
-#result{
-display:none;
-background:#e9fff1;
-padding:18px;
-margin-top:15px;
-border-radius:12px;
-font-size:18px;
-line-height:1.9;
-}
+        /* --- SECTIONS GENERAL --- */
+        section {
+            padding: 80px 0;
+        }
 
-.btn{
-display:block;
-text-decoration:none;
-text-align:center;
-padding:18px;
-margin-top:12px;
-border-radius:12px;
-font-weight:bold;
-color:white;
-font-size:18px;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.call{
-background:var(--green);
-}
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
 
-.zalo{
-background:var(--zalo);
-}
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
 
-footer{
-text-align:center;
-padding:30px;
-font-size:14px;
-color:#666;
-}
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 17px;
+        }
 
-.footer-nav{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-display:flex;
-height:70px;
-z-index:999;
-}
+        /* --- GRID & CARDS --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
 
-.footer-nav a{
-flex:1;
-display:flex;
-justify-content:center;
-align-items:center;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-color:white;
-}
+        .card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: var(--transition);
+        }
 
-.seo-text{
-font-size:16px;
-line-height:1.8;
-}
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(0, 184, 148, 0.15);
+        }
 
-.qr{
-text-align:center;
-margin-top:15px;
-}
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.qr img{
-width:180px;
-border-radius:10px;
-}
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
 
-.lang{
-position:fixed;
-top:10px;
-right:10px;
-z-index:999;
-}
+        /* --- STATS --- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
 
-.lang button{
-width:auto;
-padding:8px 14px;
-margin:2px;
-font-size:14px;
-}
+        .stat-box {
+            background: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 4px solid transparent;
+            transition: var(--transition);
+        }
 
-</style>
+        .stat-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-bottom-color: var(--accent);
+        }
 
+        .stat-box h3 {
+            font-size: 44px;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .stat-box p {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* --- PROJECTS --- */
+        .projects-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 25px;
+        }
+
+        .projects .project {
+            background: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .projects .project:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--accent);
+        }
+
+        .project h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .project p {
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        .project p strong {
+            color: var(--accent);
+        }
+
+        /* --- FEEDBACK --- */
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feedback {
+            background: #fff;
+            padding: 30px;
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            font-style: italic;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        /* --- CALL TO ACTION (CTA) --- */
+        .cta {
+            background: linear-gradient(rgba(13, 27, 42, 0.92), rgba(13, 27, 42, 0.92)),
+                        url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 90px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .cta .btn-group {
+            justify-content: center;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #070F18;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 0;
+        }
+
+        /* --- MOBILE BOTTOM NAVIGATION BAR --- */
+        .mobile-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+            background: #fff;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+            z-index: 999;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .mobile-bar a {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: var(--transition);
+        }
+
+        .mobile-bar a:not(:last-child) {
+            border-right: 1px solid #F1F5F9;
+        }
+
+        .mobile-bar a:hover {
+            background: #F8FAFC;
+            color: var(--accent);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 0 80px 0;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .mobile-bar {
+                display: flex;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            body {
+                padding-bottom: 55px; /* Tránh đè nội dung footer dưới thanh mobile bar */
+            }
+
+            .projects-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NGÔN NGỮ -->
-<div class="lang">
-<button onclick="setLang('vi')">VI</button>
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('cn')">中文</button>
-</div>
-
-<header>
-
-<img
-src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049181.jpg"
-class="avatar">
-
-<h1 id="titleName">
-BÙI HỮU ĐẠI
-</h1>
-
-<p id="titleJob">
-Kỹ sư Điện Công Nghiệp & Điện Mặt Trời
-</p>
-
-<div class="hotline">
-☎ 0838.933.628
-</div>
-
-</header>
-
-<div class="container">
-
-<div class="box">
-
-<h2 id="serviceTitle">
-Dịch vụ chuyên môn
-</h2>
-
-<div class="service">
-✔ Thi công hệ thống điện công nghiệp
-</div>
-
-<div class="service">
-✔ Sửa chữa PLC - Biến tần - Tủ điện
-</div>
-
-<div class="service">
-✔ Xử lý sự cố điện nhà xưởng 24/7
-</div>
-
-<div class="service">
-✔ Điện mặt trời Hybrid có lưu trữ
-</div>
-
-</div>
-
-<div class="box">
-
-<h2>
-Tính nhanh điện mặt trời Hybrid
-</h2>
-
-<input
-type="number"
-id="money"
-placeholder="Nhập tiền điện hàng tháng">
-
-<button onclick="calc()">
-TÍNH HỆ THỐNG
-</button>
-
-<div id="result"></div>
-
-</div>
-
-<div class="box gallery">
-
-<h2>
-Hình ảnh công trình thực tế
-</h2>
-
-<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049180.jpg">
-
-<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049179.jpg">
-
-<img src="https://raw.githubusercontent.com/buidaitech-me/t-v-n-solar/main/1000049175.jpg">
-
-</div>
-
-<div class="box seo-text">
-
-<h2>
-Điện công nghiệp Hải Phòng
-</h2>
-
-<p>
-
-Chuyên sửa chữa điện công nghiệp Hải Phòng,
-điện mặt trời Hybrid,
-tủ điện,
-PLC,
-biến tần,
-ATS,
-MCC,
-hệ thống điện nhà xưởng,
-trạm điện,
-máy phát điện,
-xử lý sự cố điện sản xuất 24/7.
-
-</p>
-
-<p>
-
-Khu vực hỗ trợ:
-Hải Phòng,
-Thủy Nguyên,
-Quảng Ninh,
-Hải Dương,
-Bắc Ninh.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<h2>
-Quét QR Website
-</h2>
-
-<div class="qr">
-
-<img
-src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://buidaitech-me.github.io/b-n-s-a-2/">
-
-<p style="margin-top:10px;font-weight:bold">
-https://buidaitech-me.github.io/b-n-s-a-2/
-</p>
-
-</div>
-
-</div>
-
-<a
-href="tel:+84838933628"
-class="btn call">
-
-📞 GỌI NGAY
-
-</a>
-
-<a
-href="https://zalo.me/84838933628"
-target="_blank"
-class="btn zalo">
-
-💬 CHAT ZALO
-
-</a>
-
-</div>
-
-<footer>
-
-© Bui Dai Electrical & Solar | Hải Phòng
-
-</footer>
-
-<div class="footer-nav">
-
-<a
-href="tel:+84838933628"
-style="background:#28a745">
-
-📞 GỌI
-
-</a>
-
-<a
-href="https://zalo.me/84838933628"
-target="_blank"
-style="background:#0084ff">
-
-💬 ZALO
-
-</a>
-
-</div>
-
-<script>
-
-function calc(){
-
-let m=document.getElementById("money").value;
-
-if(m=="" || m<=0){
-alert("Vui lòng nhập tiền điện");
-return;
-}
-
-let kw=(m/300000).toFixed(1);
-
-let total=kw*10000000;
-
-let pay=(total/m/12).toFixed(1);
-
-document.getElementById("result").style.display="block";
-
-document.getElementById("result").innerHTML=
-
-"⚡ Công suất đề xuất: <b>"+kw+" kWp</b><br><br>"+
-
-"💰 Dự toán đầu tư: <b>"+Number(total).toLocaleString('vi-VN')+" VNĐ</b><br><br>"+
-
-"⏳ Hoàn vốn dự kiến: <b>"+pay+" năm</b><br><br>"+
-
-"📲 Liên hệ Zalo 0838.933.628 để nhận báo giá chi tiết.";
-
-}
-
-
-// ĐỔI NGÔN NGỮ
-
-function setLang(lang){
-
-if(lang=="en"){
-
-document.getElementById("titleJob").innerHTML=
-"Industrial Electrical & Solar Engineer";
-
-document.getElementById("serviceTitle").innerHTML=
-"Professional Services";
-
-}
-
-if(lang=="cn"){
-
-document.getElementById("titleJob").innerHTML=
-"工业电气与太阳能工程师";
-
-document.getElementById("serviceTitle").innerHTML=
-"专业服务";
-
-}
-
-if(lang=="vi"){
-
-document.getElementById("titleJob").innerHTML=
-"Kỹ sư Điện Công Nghiệp & Điện Mặt Trời";
-
-document.getElementById("serviceTitle").innerHTML=
-"Dịch vụ chuyên môn";
-
-}
-
-}
-
-</script>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">⚡ BÙI ĐẠI TECH</div>
+                <div class="menu">
+                    <a href="#">Trang Chủ</a>
+                    <a href="#">Dịch Vụ</a>
+                    <a href="#">Công Trình</a>
+                    <a href="#">Video</a>
+                    <a href="#">Liên Hệ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>⚡ SỬA CHỮA ĐIỆN CÔNG NGHIỆP HẢI PHÒNG</h1>
+                <p>PLC • BIẾN TẦN • NHÀ XƯỞNG • SOLAR HYBRID</p>
+                <ul>
+                    <li><span>✔</span> 30+ năm kinh nghiệm thực tế chuyên sâu</li>
+                    <li><span>✔</span> Hỗ trợ xử lý kỹ thuật khẩn cấp 24/7</li>
+                    <li><span>✔</span> Chuyên khắc phục lỗi khó, sự cố máy móc nhà máy</li>
+                    <li><span>✔</span> Đội ngũ cơ động, có mặt tận nơi nhanh chóng</li>
+                </ul>
+                <div class="btn-group">
+                    <a href="tel:0838933628" class="btn btn-call">📞 GỌI NGAY</a>
+                    <a href="https://zalo.me/0838933628" class="btn btn-zalo">💬 CHAT ZALO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>🏆 Vì Sao Chọn Chúng Tôi?</h2>
+                <p>Khẳng định thương hiệu bằng sự tin cậy từ những kỹ sư dạn dày kinh nghiệm.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>30+</h3>
+                    <p>Năm kinh nghiệm</p>
+                </div>
+                <div class="stat-box">
+                    <h3>500+</h3>
+                    <p>Công trình hoàn thành</p>
+                </div>
+                <div class="stat-box">
+                    <h3>24/7</h3>
+                    <p>Hỗ trợ kỹ thuật liên tục</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Khảo sát tận nơi miễn phí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>🛠 Dịch Vụ Chuyên Nghiệp</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>⚡ Điện Công Nghiệp</h3>
+                    <p>Sửa chữa hệ thống điện nhà xưởng, bảo trì định kỳ trạm điện hạ thế và thiết bị tải lớn.</p>
+                </div>
+                <div class="card">
+                    <h3>⚙️ PLC & Biến Tần</h3>
+                    <p>Lập trình, can thiệp xử lý lỗi các dòng máy Siemens, Mitsubishi, Delta, Omron.</p>
+                </div>
+                <div class="card">
+                    <h3>☀️ Solar Hybrid</h3>
+                    <p>Tư vấn, thi công và sửa chữa hệ thống lưu trữ điện mặt trời Hybrid tối ưu chi phí điện sản xuất.</p>
+                </div>
+                <div class="card">
+                    <h3>🧰 Tủ Điện</h3>
+                    <p>Đấu nối, nâng cấp tủ ATS tự động chuyển nguồn, tủ điều khiển tự động hóa, tủ động lực.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>🏭 Công Trình Thực Tế</h2>
+            </div>
+            <div class="projects-wrapper">
+                <div class="project">
+                    <h3>⚡ Nhà Máy Nhựa Hải Phòng</h3>
+                    <p>Sự cố: Biến Tần lỗi liên tục gây dừng dây chuyền sản xuất hàng loạt.</p>
+                    <p><strong>✔ Kết quả:</strong> Khắc phục hoàn tất triệt để ngay trong ngày.</p>
+                </div>
+                <div class="project">
+                    <h3>⚡ Xưởng Cơ Khí Chế Tạo</h3>
+                    <p>Sự cố: Tủ điện quá nhiệt dẫn đến hiện tượng nhảy CB liên tục khi vào tải.</p>
+                    <p><strong>✔ Kết quả:</strong> Cân pha, xử lý giải nhiệt, hệ thống vận hành êm ái ổn định.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>⭐ Khách Hàng Đánh Giá</h2>
+            </div>
+            <div class="feedback-grid">
+                <div class="feedback">
+                    “Hỗ trợ cực kỳ nhanh chóng, xử lý chuyên nghiệp và rất có kinh nghiệm về mảng tự động hóa máy nhà xưởng.”
+                </div>
+                <div class="feedback">
+                    “Dây chuyền nhà máy hoạt động rất ổn định sau khi được đội ngũ Bùi Đại Tech xử lý các khối lỗi hệ thống.”
+                </div>
+                <div class="feedback">
+                    “Giá thành hợp lý, kỹ sư năng động, có mặt hỗ trợ xử lý sự cố ban đêm rất nhanh tại khu công nghiệp Hải Phòng.”
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>⚡ CẦN HỖ TRỢ ĐIỆN CÔNG NGHIỆP?</h2>
+            <p>Liên hệ ngay để đội ngũ kỹ sư đến tận nơi khảo sát và đưa ra giải pháp kỹ thuật nhanh chóng.</p>
+            <div class="btn-group">
+                <a href="tel:0838933628" class="btn btn-call">📞 GỌI NGAY</a>
+                <a href="https://zalo.me/0838933628" class="btn btn-zalo">💬 CHAT ZALO</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© BÙI ĐẠI TECH - Điện Công Nghiệp Hải Phòng | PLC | Biến Tần | Solar Hybrid</p>
+        </div>
+    </footer>
+
+    <div class="mobile-bar">
+        <a href="tel:0838933628">📞 Gọi điện</a>
+        <a href="https://zalo.me/0838933628">💬 Zalo</a>
+        <a href="#">🧭 Chỉ đường</a>
+    </div>
 
 </body>
 </html>
-```
-
